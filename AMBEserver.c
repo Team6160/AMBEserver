@@ -388,7 +388,7 @@ int openSerial(char *ttyname, long baud)
 	tty.c_lflag    &= ~(ECHO | ECHOE | ICANON | IEXTEN | ISIG);
 	tty.c_iflag    &= ~(BRKINT | ICRNL | INPCK | ISTRIP | IXON | IXOFF | IXANY);
 	tty.c_cflag    &= ~(CSIZE | CSTOPB | PARENB);
-	tty.c_cflag    |= CS8 | CRTSCTS;
+	tty.c_cflag    |= CS8;
 	tty.c_oflag    &= ~(OPOST);
 	tty.c_cc[VMIN] = 0;
 	tty.c_cc[VTIME] = 1;
